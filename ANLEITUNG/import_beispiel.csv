@@ -1,0 +1,6 @@
+email,first_name,last_name,dob,gender,company,street_address,suburb,state,city,postcode,country,telephone,fax,newsletter,send_welcome,customers_group_pricing
+peter@beispiel.de,Peter,Beispiel,1997/01/05,m,Beispielfirma,Teststrasse 17,bei Keller,Bayern,München,98765,de,123-456-7890,,0,0,0
+maria@beispiel.at,Maria,Meier,1997/01/06,f,,Herrengasse 12,,,Wien,1010,at,123-456-7890,,1,0,0
+walter@beispiel.de,Walter,Müller,1997/01/07,m,IBM,Beispielweg 9,,,Berlin,10101,de,123-456-7890,,0,0,0
+lisa@beispiel.ch,Lisa,Schmitt,1997/01/08,f,Google,Demoweg 8,,,Bern,2200,ch,123-456-7890,,1,0,0
+petra@beispiel.es,Petra,Test,1934/04/11,f,Microsoft,Calle 17,,,Madrid,12345,es,+011-555-555-5555,,0,0,0

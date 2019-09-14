@@ -1,0 +1,26 @@
+/**
+ * @package admin
+ * @ignore
+ * @access private
+ * @copyright Copyright 2003-2011 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @version $Id: stylesheet_acfa.css Part of the Add Customers from Admin package (lat9)
+ */
+.error { color: red; }
+.errorBold { color: red; font-weight: bold; }
+.errorDiv { width: 98%; border: 2px dashed red; margin: 10px 0px 5px 5px; padding: 5px; }
+
+.ok { color: green; }
+.okBold { color: green; font-weight: bold; }
+.okDiv {width: 98%; border: 2px dashed green; margin: 10px 0px 5px 5px; padding: 5px; }
+
+.back { float: left; }
+.spacer { width: 5px; }
+.mainLabel { width: 175px; }
+.headingLabel { font-weight: bold; padding: 10px 0; width: 100%; border-top: 2px dashed #404040; }
+#single { width: 49%; float: right; padding-left: 10px; border-left: 2px dashed #404040; } 
+#multiple { width: 49%; float: left; }
+#multiple .headingLabel { padding-bottom: 27px; }
+#multiple .mainLabel { width: 225px; }
+#multiple table { width: 100%; }

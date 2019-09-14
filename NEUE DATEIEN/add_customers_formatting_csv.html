@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Formatting a CSV File for Bulk Upload</title>
+<style type="text/css">
+<!--
+.style1 { color: #006600; font-weight: bold; }
+body { font-family: arial; font-size: 12px; }
+table { border-collapse: collapse; font-size: 12px; }
+td, th { border: 1px solid #404040; padding: 5px; vertical-align: top; }
+th { text-align: left; }
+.o { background-color: #f4f4f4; }
+-->
+</style>
+</head>
+<body>
+  <h2>Formatting a CSV File for Bulk Upload (Add Customers from Admin, Zen Cart 1.5.0 and later)</h2>
+
+  <p>The headings can be in any column-order as long as they are contained in first non-blank row of the uploaded file. The heading values and their expected data are:</p>
+  <table>
+    <tr class="tHead">
+      <th>Heading Title</th>
+      <th>Description</th>
+    </tr>
+    <tr class="o">
+      <td>gender</td>
+      <td>If <em>Configuration->Customer Details->Email Salutation</em> is set to <em>true</em>, the value must be one of m, M, male, f, F, or female; otherwise, the value is ignored.</td>
+    </tr>
+    <tr>
+      <td>first_name</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->First Name</em>; if that value is 0, this field is optional.</td>
+    </tr>
+    <tr class="o">
+      <td>last_name</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->Last Name</em>; if that value is 0, this field is optional.</td>
+    </tr>
+    <tr>
+      <td>dob</td>
+      <td>If <em>Customer Details->Date of Birth</em> is set to <em>true</em>, the minimum length is controlled by <em>Configuration->Minimum Values->Date of Birth</em> and date must be in the format chosen from the "DOB Format" drop-down menu.</td>
+    </tr>
+    <tr class="o">
+      <td>email</td>
+      <td>Required, the minimum length is controlled by <em>Configuration->Minimum Values->Email Address</em>. Regardless of minimum length, the value must be a "proper" email address and must not already be used by another customer in your database.</td>
+    </tr>
+    <tr>
+      <td>company</td>
+      <td>If <em>Configuration->Customer Details->Company</em> is set to <em>true</em>, the minimum length is controlled by <em>Configuration->Minimum Values->Company</em>; otherwise, the value is ignored.</td>
+    </tr>
+    <tr class="o">
+      <td>street_address</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->Street Address</em>; if that value is 0, this field is optional.</td>
+    </tr>
+    <tr>
+      <td>suburb</td>
+      <td>If <em>Configuration->Customer Details->Address Line 2</em> is set to <em>false</em>, this field is not displayed; otherwise, the field is displayed but is optional.</td>
+    </tr>
+    <tr class="o">
+      <td>state</td>
+      <td>If <em>Configuration->Customer Details->State</em> is set to <em>false</em>, this field is ignored; otherwise, either this field or the <b>zone_id</b> field must be specified.  The minimum length of this field is controlled by <em>Configuration->Minimum Values->State</em>; if that value is 0, this field is optional. Either the long-form or code, e.g. Alabama/AL (United States) or British Columbia/BC (Canada), can be used.</td>
+    </tr>
+      <tr>  
+      <td>zone_id</td>  
+        <td>If <em>Configuration->Customer Details->State</em> is set to <em>false</em>, this field is ignored; otherwise, either this field or the <b>state</b> field must be specified.  The numeric zone_id associated with the customer's <b>state</b> and <b>country</b>.</td>    
+    </tr>
+    <tr class="o">
+      <td>city</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->City</em>; if that value is 0, this field is optional.</td>
+    </tr>
+    <tr>
+      <td>postcode</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->Postcode</em>; if that value is 0, this field is optional.  If the value is specified and the associated country is one of Canada, the United Kingdom or the United States, then the value must match the Post Code format for that country.</td>
+    </tr>
+    <tr class="o">
+      <td>country</td>
+      <td>This field is required and must be one of the 2-character ISO codes for a country supported by your zen-cart.</td>
+    </tr>
+    <tr>
+      <td>telephone</td>
+      <td>The minimum length is controlled by <em>Configuration->Minimum Values->Telephone Number</em>; if that value is 0, this field is optional. If the value is specified, its format must conform to that of a world phone number.</td>
+    </tr>
+    <tr class="o">
+      <td>fax</td>
+      <td>This field is optional.</td>
+    </tr>
+    <tr>
+      <td>newsletter</td>
+      <td>Identifies whether (1) or not (otherwise) the customer is to be registered for a newsletter subscription.  If the field is not supplied, the customer is not subscribed to your newsletter.</td>
+    </tr>
+    <tr class="o">
+      <td>send_welcome</td>
+      <td>Identifies whether (1) or not (0) to send a "welcome" email to the user.  If the field is not supplied, no welcome email will be sent.</td>
+    </tr>
+    <tr>
+      <td>customers_group_pricing</td>
+      <td>This value is specified as a number that identifies the <em>group_id</em> of the "Customers Group Pricing" group to which the customer should be associated.  A value of 0 indicates that the customer is part of <b>no</b> such group, i.e. pricing group <strong>--none--</strong>. If this column is not specified in the .csv file, then this value is set to 0 for all customers to be added.</td>
+    </tr>
+  </table>
+    
+  <p>If you don't know how to make a Comma-Separated Value (CSV) file, then use Microsoft Excel as normal to create a spreadsheet sheet. When you are ready to save, choose <span class="style1">file>save as</span> then at the bottom there will be a 'Save as type' option; choose 'CSV (comma delimited)' and then press Save. Answer yes to any warnings and there you have it... a csv!</p>
+  <p><a href="http://pro-webs.net/">PRO-Webs</a> v1-05 Modification of existing contribution by: <a href="http://www.zen-cart.com/index.php?main_page=product_contrib_info&amp;products_id=454">Rick Riehle</a></p>
+</body>
+</html>

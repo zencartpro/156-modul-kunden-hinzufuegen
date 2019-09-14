@@ -1,0 +1,7 @@
+email,first_name,last_name,dob,gender,company,street_address,suburb,state,city,postcode,country,telephone,fax,newsletter,send_welcome,zone_id
+jack@home.com,jack,smith,1955/01/05,,acme parts,123 my st,hillview,colorado,anytown,1234555,us,123-456-7890,,0,0,
+fred@home.com,francis,jones,1997/06/01,female,custom carts,123 my st,ashwood,fl,miami,12345,us,123-456-7890,,1,0,
+benny@home.com,ben,duval,1997/01/07,male,IBM,123 my st,albury,,smallville,12345,us,123-456-7890,,0,0,
+jill@home.com,jill,davis,1997/01/08,f,Google,123 my st,cooper,ky,mobile,12345,us,123-456-7890,,1,0,
+sam@home.com,sam,davis,1940/01/02,m,x,123 my st,,,victoria,a1a 1aa,ca,123-456-7890,123-456-7890,0,1,67
+mary@home.com,mary,jones,2012/13/01,,,123 my st,,madrid,madrid,,es,+011-555-555-5555,,,,
